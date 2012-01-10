@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96262A1314BCC74F003333E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96262A1214BCC74F003333E7 /* UIKit.framework */; };
+		96262A1514BCC74F003333E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96262A1414BCC74F003333E7 /* Foundation.framework */; };
+		96262A1714BCC74F003333E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96262A1614BCC74F003333E7 /* CoreGraphics.framework */; };
+		96262A1D14BCC74F003333E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96262A1B14BCC74F003333E7 /* InfoPlist.strings */; };
+		96262A1F14BCC74F003333E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96262A1E14BCC74F003333E7 /* main.m */; };
+		96262A2314BCC74F003333E7 /* QuadControlAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96262A2214BCC74F003333E7 /* QuadControlAppDelegate.m */; };
+		96262A2614BCC74F003333E7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96262A2414BCC74F003333E7 /* MainWindow.xib */; };
+		96262A2914BCC74F003333E7 /* QuadControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96262A2814BCC74F003333E7 /* QuadControlViewController.m */; };
+		96262A2C14BCC74F003333E7 /* QuadControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96262A2A14BCC74F003333E7 /* QuadControlViewController.xib */; };
+		96262A3414BCC750003333E7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96262A3314BCC750003333E7 /* SenTestingKit.framework */; };
+		96262A3514BCC750003333E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96262A1214BCC74F003333E7 /* UIKit.framework */; };
+		96262A3614BCC750003333E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96262A1414BCC74F003333E7 /* Foundation.framework */; };
+		96262A3714BCC750003333E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96262A1614BCC74F003333E7 /* CoreGraphics.framework */; };
+		96262A3F14BCC750003333E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96262A3D14BCC750003333E7 /* InfoPlist.strings */; };
+		96262A4114BCC750003333E7 /* QuadControlTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 96262A4014BCC750003333E7 /* QuadControlTests.h */; };
+		96262A4314BCC750003333E7 /* QuadControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96262A4214BCC750003333E7 /* QuadControlTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96262A3814BCC750003333E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96262A0514BCC74F003333E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96262A0D14BCC74F003333E7;
+			remoteInfo = QuadControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96262A0E14BCC74F003333E7 /* QuadControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuadControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96262A1214BCC74F003333E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96262A1414BCC74F003333E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		96262A1614BCC74F003333E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96262A1A14BCC74F003333E7 /* QuadControl-Info.plist */ = {isa = PBXFileReference; path = "QuadControl-Info.plist"; sourceTree = "<group>"; };
+		96262A1C14BCC74F003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96262A1E14BCC74F003333E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96262A2014BCC74F003333E7 /* QuadControl-Prefix.pch */ = {isa = PBXFileReference; path = "QuadControl-Prefix.pch"; sourceTree = "<group>"; };
+		96262A2114BCC74F003333E7 /* QuadControlAppDelegate.h */ = {isa = PBXFileReference; path = QuadControlAppDelegate.h; sourceTree = "<group>"; };
+		96262A2214BCC74F003333E7 /* QuadControlAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadControlAppDelegate.m; sourceTree = "<group>"; };
+		96262A2514BCC74F003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		96262A2714BCC74F003333E7 /* QuadControlViewController.h */ = {isa = PBXFileReference; path = QuadControlViewController.h; sourceTree = "<group>"; };
+		96262A2814BCC74F003333E7 /* QuadControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadControlViewController.m; sourceTree = "<group>"; };
+		96262A2B14BCC74F003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/QuadControlViewController.xib; sourceTree = "<group>"; };
+		96262A3214BCC750003333E7 /* QuadControlTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuadControlTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96262A3314BCC750003333E7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		96262A3C14BCC750003333E7 /* QuadControlTests-Info.plist */ = {isa = PBXFileReference; path = "QuadControlTests-Info.plist"; sourceTree = "<group>"; };
+		96262A3E14BCC750003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96262A4014BCC750003333E7 /* QuadControlTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadControlTests.h; sourceTree = "<group>"; };
+		96262A4214BCC750003333E7 /* QuadControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadControlTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96262A0B14BCC74F003333E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96262A1314BCC74F003333E7 /* UIKit.framework in Frameworks */,
+				96262A1514BCC74F003333E7 /* Foundation.framework in Frameworks */,
+				96262A1714BCC74F003333E7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96262A2E14BCC750003333E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96262A3414BCC750003333E7 /* SenTestingKit.framework in Frameworks */,
+				96262A3514BCC750003333E7 /* UIKit.framework in Frameworks */,
+				96262A3614BCC750003333E7 /* Foundation.framework in Frameworks */,
+				96262A3714BCC750003333E7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96262A0314BCC74F003333E7 = {
+			isa = PBXGroup;
+			children = (
+				96262A1814BCC74F003333E7 /* QuadControl */,
+				96262A3A14BCC750003333E7 /* QuadControlTests */,
+				96262A1114BCC74F003333E7 /* Frameworks */,
+				96262A0F14BCC74F003333E7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96262A0F14BCC74F003333E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96262A0E14BCC74F003333E7 /* QuadControl.app */,
+				96262A3214BCC750003333E7 /* QuadControlTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96262A1114BCC74F003333E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96262A1214BCC74F003333E7 /* UIKit.framework */,
+				96262A1414BCC74F003333E7 /* Foundation.framework */,
+				96262A1614BCC74F003333E7 /* CoreGraphics.framework */,
+				96262A3314BCC750003333E7 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96262A1814BCC74F003333E7 /* QuadControl */ = {
+			isa = PBXGroup;
+			children = (
+				96262A2114BCC74F003333E7 /* QuadControlAppDelegate.h */,
+				96262A2214BCC74F003333E7 /* QuadControlAppDelegate.m */,
+				96262A2414BCC74F003333E7 /* MainWindow.xib */,
+				96262A2714BCC74F003333E7 /* QuadControlViewController.h */,
+				96262A2814BCC74F003333E7 /* QuadControlViewController.m */,
+				96262A2A14BCC74F003333E7 /* QuadControlViewController.xib */,
+				96262A1914BCC74F003333E7 /* Supporting Files */,
+			);
+			path = QuadControl;
+			sourceTree = "<group>";
+		};
+		96262A1914BCC74F003333E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96262A1A14BCC74F003333E7 /* QuadControl-Info.plist */,
+				96262A1B14BCC74F003333E7 /* InfoPlist.strings */,
+				96262A1E14BCC74F003333E7 /* main.m */,
+				96262A2014BCC74F003333E7 /* QuadControl-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96262A3A14BCC750003333E7 /* QuadControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				96262A4014BCC750003333E7 /* QuadControlTests.h */,
+				96262A4214BCC750003333E7 /* QuadControlTests.m */,
+				96262A3B14BCC750003333E7 /* Supporting Files */,
+			);
+			path = QuadControlTests;
+			sourceTree = "<group>";
+		};
+		96262A3B14BCC750003333E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96262A3C14BCC750003333E7 /* QuadControlTests-Info.plist */,
+				96262A3D14BCC750003333E7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96262A0D14BCC74F003333E7 /* QuadControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96262A4614BCC750003333E7 /* Build configuration list for PBXNativeTarget "QuadControl" */;
+			buildPhases = (
+				96262A0A14BCC74F003333E7 /* Sources */,
+				96262A0B14BCC74F003333E7 /* Frameworks */,
+				96262A0C14BCC74F003333E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuadControl;
+			productName = QuadControl;
+			productReference = 96262A0E14BCC74F003333E7 /* QuadControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96262A3114BCC750003333E7 /* QuadControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96262A4914BCC750003333E7 /* Build configuration list for PBXNativeTarget "QuadControlTests" */;
+			buildPhases = (
+				96262A2D14BCC750003333E7 /* Sources */,
+				96262A2E14BCC750003333E7 /* Frameworks */,
+				96262A2F14BCC750003333E7 /* Resources */,
+				96262A3014BCC750003333E7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96262A3914BCC750003333E7 /* PBXTargetDependency */,
+			);
+			name = QuadControlTests;
+			productName = QuadControlTests;
+			productReference = 96262A3214BCC750003333E7 /* QuadControlTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96262A0514BCC74F003333E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Kle.io;
+			};
+			buildConfigurationList = 96262A0814BCC74F003333E7 /* Build configuration list for PBXProject "QuadControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 96262A0314BCC74F003333E7;
+			productRefGroup = 96262A0F14BCC74F003333E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96262A0D14BCC74F003333E7 /* QuadControl */,
+				96262A3114BCC750003333E7 /* QuadControlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96262A0C14BCC74F003333E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96262A1D14BCC74F003333E7 /* InfoPlist.strings in Resources */,
+				96262A2614BCC74F003333E7 /* MainWindow.xib in Resources */,
+				96262A2C14BCC74F003333E7 /* QuadControlViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96262A2F14BCC750003333E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96262A3F14BCC750003333E7 /* InfoPlist.strings in Resources */,
+				96262A4114BCC750003333E7 /* QuadControlTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96262A3014BCC750003333E7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96262A0A14BCC74F003333E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96262A1F14BCC74F003333E7 /* main.m in Sources */,
+				96262A2314BCC74F003333E7 /* QuadControlAppDelegate.m in Sources */,
+				96262A2914BCC74F003333E7 /* QuadControlViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96262A2D14BCC750003333E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96262A4314BCC750003333E7 /* QuadControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96262A3914BCC750003333E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96262A0D14BCC74F003333E7 /* QuadControl */;
+			targetProxy = 96262A3814BCC750003333E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96262A1B14BCC74F003333E7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96262A1C14BCC74F003333E7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96262A2414BCC74F003333E7 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96262A2514BCC74F003333E7 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		96262A2A14BCC74F003333E7 /* QuadControlViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96262A2B14BCC74F003333E7 /* en */,
+			);
+			name = QuadControlViewController.xib;
+			sourceTree = "<group>";
+		};
+		96262A3D14BCC750003333E7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96262A3E14BCC750003333E7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96262A4414BCC750003333E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96262A4514BCC750003333E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96262A4714BCC750003333E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuadControl/QuadControl-Prefix.pch";
+				INFOPLIST_FILE = "QuadControl/QuadControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		96262A4814BCC750003333E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuadControl/QuadControl-Prefix.pch";
+				INFOPLIST_FILE = "QuadControl/QuadControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		96262A4A14BCC750003333E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QuadControl.app/QuadControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuadControl/QuadControl-Prefix.pch";
+				INFOPLIST_FILE = "QuadControlTests/QuadControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		96262A4B14BCC750003333E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QuadControl.app/QuadControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuadControl/QuadControl-Prefix.pch";
+				INFOPLIST_FILE = "QuadControlTests/QuadControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96262A0814BCC74F003333E7 /* Build configuration list for PBXProject "QuadControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96262A4414BCC750003333E7 /* Debug */,
+				96262A4514BCC750003333E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96262A4614BCC750003333E7 /* Build configuration list for PBXNativeTarget "QuadControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96262A4714BCC750003333E7 /* Debug */,
+				96262A4814BCC750003333E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96262A4914BCC750003333E7 /* Build configuration list for PBXNativeTarget "QuadControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96262A4A14BCC750003333E7 /* Debug */,
+				96262A4B14BCC750003333E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96262A0514BCC74F003333E7 /* Project object */;
+}
