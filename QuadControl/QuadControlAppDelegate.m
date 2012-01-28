@@ -14,14 +14,43 @@
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize accelerometer = _accelerometer;
+@synthesize pidController = _pidController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+#pragma mark -
+#pragma mark === Setup and teardown ===
+#pragma mark -
+- (id)init
 {
-  // Override point for customization after application launch.
-   
+  if (self = [super init]) {
+    AccelerometerController * acc = 
+        [[[AccelerometerController alloc] init] autorelease];
+    [self setAccelerometer: acc];
+
+    PIDController * pidController =
+        [[[PIDController alloc] init] autorelease];
+    [self setPidController:pidController];
+  }
+  return self;
+}
+
+- (void) dealloc {
+  [_accelerometer release];
+  [_pidController release];
+  [_window release];
+  [_viewController release];
+  [_accelerometer release];
+  [super dealloc];
+}
+
+#pragma mark -
+#pragma mark === Standard stuff ===
+#pragma mark -
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{   
   self.window.rootViewController = self.viewController;
   [self.window makeKeyAndVisible];
-    return YES;
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -61,13 +90,6 @@
    Save data if appropriate.
    See also applicationDidEnterBackground:.
    */
-}
-
-- (void)dealloc
-{
-  [_window release];
-  [_viewController release];
-    [super dealloc];
 }
 
 @end

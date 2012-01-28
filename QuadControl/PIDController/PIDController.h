@@ -8,6 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PIDController : NSObject
+@interface PIDController : NSObject {
+  NSMutableArray * history;
 
+  NSNumber * controlSignal;
+  NSNumber * proportionalGain;
+  NSNumber * integralGain;
+  NSNumber * derivativeGain;
+}
+
+@property (nonatomic, retain) NSNumber * proportionalGain;
+@property (nonatomic, retain) NSNumber * integralGain;
+@property (nonatomic, retain) NSNumber * derivativeGain;
+
+- (void) setControllSignal:(NSInteger) signal;
+- (void) addErrorMeasurement:(NSInteger) error;
+@end
+
+@protocol PIDControllerDelegate<NSObject>
+- (void) pidController:(PIDController *) controller controllerOutput:(NSInteger) output;
 @end

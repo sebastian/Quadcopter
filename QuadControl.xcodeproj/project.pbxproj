@@ -24,6 +24,7 @@
 		96262A4114BCC750003333E7 /* QuadControlTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 96262A4014BCC750003333E7 /* QuadControlTests.h */; };
 		96262A4314BCC750003333E7 /* QuadControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96262A4214BCC750003333E7 /* QuadControlTests.m */; };
 		96DAC92414D44DF300F092D9 /* PIDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DAC92314D44DF300F092D9 /* PIDController.m */; };
+		96DAC92814D44F7D00F092D9 /* AccelerometerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DAC92714D44F7D00F092D9 /* AccelerometerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		96262A4214BCC750003333E7 /* QuadControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadControlTests.m; sourceTree = "<group>"; };
 		96DAC92214D44DF300F092D9 /* PIDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PIDController.h; path = PIDController/PIDController.h; sourceTree = "<group>"; };
 		96DAC92314D44DF300F092D9 /* PIDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PIDController.m; path = PIDController/PIDController.m; sourceTree = "<group>"; };
+		96DAC92614D44F7D00F092D9 /* AccelerometerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerometerController.h; path = Accelerometer/AccelerometerController.h; sourceTree = "<group>"; };
+		96DAC92714D44F7D00F092D9 /* AccelerometerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccelerometerController.m; path = Accelerometer/AccelerometerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,7 @@
 		96262A1814BCC74F003333E7 /* QuadControl */ = {
 			isa = PBXGroup;
 			children = (
+				96DAC92514D44F1000F092D9 /* New Group1 */,
 				96DAC92014D44DBD00F092D9 /* New Group */,
 				96262A2114BCC74F003333E7 /* QuadControlAppDelegate.h */,
 				96262A2214BCC74F003333E7 /* QuadControlAppDelegate.m */,
@@ -168,6 +172,15 @@
 				96DAC92314D44DF300F092D9 /* PIDController.m */,
 			);
 			name = "New Group";
+			sourceTree = "<group>";
+		};
+		96DAC92514D44F1000F092D9 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				96DAC92614D44F7D00F092D9 /* AccelerometerController.h */,
+				96DAC92714D44F7D00F092D9 /* AccelerometerController.m */,
+			);
+			name = "New Group1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +295,7 @@
 				96262A2314BCC74F003333E7 /* QuadControlAppDelegate.m in Sources */,
 				96262A2914BCC74F003333E7 /* QuadControlViewController.m in Sources */,
 				96DAC92414D44DF300F092D9 /* PIDController.m in Sources */,
+				96DAC92814D44F7D00F092D9 /* AccelerometerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

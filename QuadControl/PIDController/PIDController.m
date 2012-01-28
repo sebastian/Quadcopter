@@ -10,6 +10,10 @@
 
 @implementation PIDController
 
+@synthesize proportionalGain;
+@synthesize integralGain;
+@synthesize derivativeGain;
+
 - (id)init
 {
     self = [super init];
