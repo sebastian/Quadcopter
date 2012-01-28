@@ -23,6 +23,7 @@
 		96262A3F14BCC750003333E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96262A3D14BCC750003333E7 /* InfoPlist.strings */; };
 		96262A4114BCC750003333E7 /* QuadControlTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 96262A4014BCC750003333E7 /* QuadControlTests.h */; };
 		96262A4314BCC750003333E7 /* QuadControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96262A4214BCC750003333E7 /* QuadControlTests.m */; };
+		96DAC92414D44DF300F092D9 /* PIDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DAC92314D44DF300F092D9 /* PIDController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,22 +41,24 @@
 		96262A1214BCC74F003333E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96262A1414BCC74F003333E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96262A1614BCC74F003333E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		96262A1A14BCC74F003333E7 /* QuadControl-Info.plist */ = {isa = PBXFileReference; path = "QuadControl-Info.plist"; sourceTree = "<group>"; };
+		96262A1A14BCC74F003333E7 /* QuadControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuadControl-Info.plist"; sourceTree = "<group>"; };
 		96262A1C14BCC74F003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96262A1E14BCC74F003333E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		96262A2014BCC74F003333E7 /* QuadControl-Prefix.pch */ = {isa = PBXFileReference; path = "QuadControl-Prefix.pch"; sourceTree = "<group>"; };
-		96262A2114BCC74F003333E7 /* QuadControlAppDelegate.h */ = {isa = PBXFileReference; path = QuadControlAppDelegate.h; sourceTree = "<group>"; };
+		96262A2014BCC74F003333E7 /* QuadControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuadControl-Prefix.pch"; sourceTree = "<group>"; };
+		96262A2114BCC74F003333E7 /* QuadControlAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadControlAppDelegate.h; sourceTree = "<group>"; };
 		96262A2214BCC74F003333E7 /* QuadControlAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadControlAppDelegate.m; sourceTree = "<group>"; };
 		96262A2514BCC74F003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		96262A2714BCC74F003333E7 /* QuadControlViewController.h */ = {isa = PBXFileReference; path = QuadControlViewController.h; sourceTree = "<group>"; };
+		96262A2714BCC74F003333E7 /* QuadControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadControlViewController.h; sourceTree = "<group>"; };
 		96262A2814BCC74F003333E7 /* QuadControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadControlViewController.m; sourceTree = "<group>"; };
 		96262A2B14BCC74F003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/QuadControlViewController.xib; sourceTree = "<group>"; };
 		96262A3214BCC750003333E7 /* QuadControlTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuadControlTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96262A3314BCC750003333E7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		96262A3C14BCC750003333E7 /* QuadControlTests-Info.plist */ = {isa = PBXFileReference; path = "QuadControlTests-Info.plist"; sourceTree = "<group>"; };
+		96262A3C14BCC750003333E7 /* QuadControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuadControlTests-Info.plist"; sourceTree = "<group>"; };
 		96262A3E14BCC750003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96262A4014BCC750003333E7 /* QuadControlTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadControlTests.h; sourceTree = "<group>"; };
 		96262A4214BCC750003333E7 /* QuadControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadControlTests.m; sourceTree = "<group>"; };
+		96DAC92214D44DF300F092D9 /* PIDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PIDController.h; path = PIDController/PIDController.h; sourceTree = "<group>"; };
+		96DAC92314D44DF300F092D9 /* PIDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PIDController.m; path = PIDController/PIDController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 		96262A1814BCC74F003333E7 /* QuadControl */ = {
 			isa = PBXGroup;
 			children = (
+				96DAC92014D44DBD00F092D9 /* New Group */,
 				96262A2114BCC74F003333E7 /* QuadControlAppDelegate.h */,
 				96262A2214BCC74F003333E7 /* QuadControlAppDelegate.m */,
 				96262A2414BCC74F003333E7 /* MainWindow.xib */,
@@ -155,6 +159,15 @@
 				96262A3D14BCC750003333E7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96DAC92014D44DBD00F092D9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				96DAC92214D44DF300F092D9 /* PIDController.h */,
+				96DAC92314D44DF300F092D9 /* PIDController.m */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +281,7 @@
 				96262A1F14BCC74F003333E7 /* main.m in Sources */,
 				96262A2314BCC74F003333E7 /* QuadControlAppDelegate.m in Sources */,
 				96262A2914BCC74F003333E7 /* QuadControlViewController.m in Sources */,
+				96DAC92414D44DF300F092D9 /* PIDController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +457,7 @@
 				96262A4814BCC750003333E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96262A4914BCC750003333E7 /* Build configuration list for PBXNativeTarget "QuadControlTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +466,7 @@
 				96262A4B14BCC750003333E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
