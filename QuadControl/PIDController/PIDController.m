@@ -24,4 +24,6 @@
     return self;
 }
 
+- (void) setControllSignal:(NSInteger) signal {}
+- (void) addMeasurement:(NSInteger) measurement {}
 @end

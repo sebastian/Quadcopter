@@ -11,10 +11,6 @@
 @interface AccelerometerController : NSObject <UIAccelerometerDelegate> {
   UIAccelerationValue accelerationX;
   UIAccelerationValue accelerationY;
-  
-  // calibration support
-  float firstCalibrationReading;
-  float currentRawReading;
-  float calibrationOffset;
+  UIAccelerationValue accelerationZ;
 }
 @end

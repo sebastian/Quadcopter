@@ -22,7 +22,7 @@
 @property (nonatomic, retain) NSNumber * derivativeGain;
 
 - (void) setControllSignal:(NSInteger) signal;
-- (void) addErrorMeasurement:(NSInteger) error;
+- (void) addMeasurement:(NSInteger) measurement;
 @end
 
 @protocol PIDControllerDelegate<NSObject>

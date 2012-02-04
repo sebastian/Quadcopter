@@ -122,8 +122,8 @@
 		96262A1814BCC74F003333E7 /* QuadControl */ = {
 			isa = PBXGroup;
 			children = (
-				96DAC92514D44F1000F092D9 /* New Group1 */,
-				96DAC92014D44DBD00F092D9 /* New Group */,
+				96DAC92514D44F1000F092D9 /* Accelerometer */,
+				96DAC92014D44DBD00F092D9 /* PID */,
 				96262A2114BCC74F003333E7 /* QuadControlAppDelegate.h */,
 				96262A2214BCC74F003333E7 /* QuadControlAppDelegate.m */,
 				96262A2414BCC74F003333E7 /* MainWindow.xib */,
@@ -165,22 +165,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		96DAC92014D44DBD00F092D9 /* New Group */ = {
+		96DAC92014D44DBD00F092D9 /* PID */ = {
 			isa = PBXGroup;
 			children = (
 				96DAC92214D44DF300F092D9 /* PIDController.h */,
 				96DAC92314D44DF300F092D9 /* PIDController.m */,
 			);
-			name = "New Group";
+			name = PID;
 			sourceTree = "<group>";
 		};
-		96DAC92514D44F1000F092D9 /* New Group1 */ = {
+		96DAC92514D44F1000F092D9 /* Accelerometer */ = {
 			isa = PBXGroup;
 			children = (
 				96DAC92614D44F7D00F092D9 /* AccelerometerController.h */,
 				96DAC92714D44F7D00F092D9 /* AccelerometerController.m */,
 			);
-			name = "New Group1";
+			name = Accelerometer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
