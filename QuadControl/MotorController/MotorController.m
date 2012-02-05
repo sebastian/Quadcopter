@@ -11,7 +11,8 @@
 
 #define MAX_MOTOR_VALUE 180
 #define MIN_MOTOR_VALUE 0
-#define FACTOR_INCREASE 4
+#define FACTOR_INCREASE 10
+#define AVOID_ROUNDING_FACTOR 1000
 #define TEN_MS 1.0/100
 
 @implementation MotorController
@@ -69,12 +70,12 @@
 }
 
 - (int) getValidMotorValueForCurrent:(int) currentMotorValue
-                       desiredChange:(int) desiredChange {
+                       desiredChange:(double) desiredChange {
   int desiredNewValue = currentMotorValue + desiredChange;
-  if (desiredNewValue > MAX_MOTOR_VALUE) {
-    return MAX_MOTOR_VALUE;
-  } else if (desiredNewValue < MIN_MOTOR_VALUE) {
-    return MIN_MOTOR_VALUE;
+  if (desiredNewValue > MAX_MOTOR_VALUE * AVOID_ROUNDING_FACTOR) {
+    return MAX_MOTOR_VALUE * AVOID_ROUNDING_FACTOR;
+  } else if (desiredNewValue < MIN_MOTOR_VALUE * AVOID_ROUNDING_FACTOR) {
+    return MIN_MOTOR_VALUE * AVOID_ROUNDING_FACTOR;
   } else {
     return desiredNewValue;
   }
@@ -91,8 +92,8 @@
 
 // PIDControllerDelegate method
 - (void) pidController:(PIDController *) controller controllerOutput:(double) output {
-  int side1 = (int) FACTOR_INCREASE * output * 0.5;
-  int side2 = (-1) * side1;
+  double side1 = AVOID_ROUNDING_FACTOR * FACTOR_INCREASE * output * 0.5;
+  double side2 = (-1) * side1;
   
   if (controller == _leftRightPidController) {
     // Left side
@@ -102,18 +103,24 @@
     motorRightFront = [self getValidMotorValueForCurrent:motorRightFront desiredChange:side2];
     motorRightBack = [self getValidMotorValueForCurrent:motorRightBack desiredChange:side2];
   } else if (controller == _frontBackPidController) {
-    // Front
-    motorLeftFront = [self getValidMotorValueForCurrent:motorLeftFront desiredChange:side2];
-    motorRightFront = [self getValidMotorValueForCurrent:motorRightFront desiredChange:side2];
     // Back
     motorLeftBack = [self getValidMotorValueForCurrent:motorLeftBack desiredChange:side1];
     motorRightBack = [self getValidMotorValueForCurrent:motorRightBack desiredChange:side1];    
+    // Front
+    motorLeftFront = [self getValidMotorValueForCurrent:motorLeftFront desiredChange:side2];
+    motorRightFront = [self getValidMotorValueForCurrent:motorRightFront desiredChange:side2];
   }
   MotorView * view = (MotorView*) _viewPidController.view;
-  [view displayMotorValuesForLeftFront:motorLeftFront
-                              leftBack:motorLeftBack
-                            rightFront:motorRightFront
-                             rightBack:motorRightBack];   
+  [view displayMotorValuesForLeftFront:motorLeftFront / AVOID_ROUNDING_FACTOR
+                              leftBack:motorLeftBack / AVOID_ROUNDING_FACTOR
+                            rightFront:motorRightFront / AVOID_ROUNDING_FACTOR
+                             rightBack:motorRightBack / AVOID_ROUNDING_FACTOR];  
+  
+  if (controller == _leftRightPidController) {
+    [view setPidValueForLeftRight:output];
+  } else if (controller == _frontBackPidController) {
+    [view setPidValueForFrontBack:output];
+  }
 }
 
 - (void) setPValue:(double)val {

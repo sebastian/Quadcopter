@@ -34,9 +34,9 @@
   [super tearDown];
 }
 
-- (void) assertThat:(double) val isWithinEpsilon:(double)eps of:(double)realVal {
-  STAssertTrue(val < realVal + eps, @"Value should not exceed realValue + eps");
-  STAssertTrue(val > realVal - eps, @"Value should not be less than realValue - eps");
+- (void) assertThat:(double) val isWithinEpsilon:(double)eps of:(double)realVal withMessage:(NSString*)msg {
+  STAssertTrue(val < realVal + eps, @"Value should not exceed realValue + eps, %@", msg);
+  STAssertTrue(val > realVal - eps, @"Value should not be less than realValue - eps, %@", msg);
 }
 
 - (void)testShouldPassChangesBackToDelegate {
@@ -61,7 +61,7 @@
   // Hence the output should be somewhat close to 1 :D
   STAssertTrue(_hasReceivedValue, @"Should have received an output from the PIDController");
   double result = [_pidResult doubleValue];
-  [self assertThat:result isWithinEpsilon:0.001 of:1];
+  [self assertThat:result isWithinEpsilon:0.001 of:1 withMessage:@"testing PController"];
   
   // We now want to ensure that the history does not affect the proportional
   // controller.
@@ -76,7 +76,7 @@
   // We have saturdated the history
   [pidController addMeasurement:[NSNumber numberWithFloat:0.0]];
   result = [_pidResult doubleValue];
-  [self assertThat:result isWithinEpsilon:0.001 of:1];
+  [self assertThat:result isWithinEpsilon:0.001 of:1 withMessage:@"testing pController"];
 }
 
 - (void) testDController {
@@ -97,7 +97,7 @@
   // dt is set to be 10 ms, hence the output should be: 100
   STAssertTrue(_hasReceivedValue, @"Should have received an output from the PIDController");
   double result = [_pidResult doubleValue];
-  [self assertThat:result isWithinEpsilon:0.001 of:100];
+  [self assertThat:result isWithinEpsilon:0.001 of:100 withMessage:@"testing DController"];
   
   // We now want to ensure that a logner history does not affect the
   // derivative controller
@@ -113,11 +113,11 @@
   // We have saturdated the history
   [pidController addMeasurement:[NSNumber numberWithFloat:0.0]];
   result = [_pidResult doubleValue];
-  [self assertThat:result isWithinEpsilon:0.001 of:100];
+  [self assertThat:result isWithinEpsilon:0.001 of:100 withMessage:@"testing DController1"];
 
   [pidController addMeasurement:[NSNumber numberWithFloat:1.0]];
   result = [_pidResult doubleValue];
-  [self assertThat:result isWithinEpsilon:0.001 of:-100];
+  [self assertThat:result isWithinEpsilon:0.001 of:-100 withMessage:@"testing DController2"];
 }
 
 - (void) testIController {
@@ -130,19 +130,82 @@
   
   // The integral controller needs at least two measurements in order
   // to generate output.
-  [pidController setDt:1.0/100];
+  [pidController setDt:10.0/1000];
   
   [pidController addMeasurement:[NSNumber numberWithFloat:1.0]];
   [pidController addMeasurement:[NSNumber numberWithFloat:0.5]];
   
   // We have two points.
-  // 1: 1.0
-  // 2: 0.5
+  // 1: 1.0 (error 0)
+  // 2: 0.5 (error 0.5)
   // That is an area of dt * 0.5 + (dt * 0.5 / 2)
-  // dt is set to be 10 ms, so the value should be: 0.0075
+  // dt is set to be 10 ms, so the value should be: 0.0025
   STAssertTrue(_hasReceivedValue, @"Should have received an output from the PIDController");
   double result = [_pidResult doubleValue];
-  [self assertThat:result isWithinEpsilon:0.0001 of:0.0075];  
+  [self assertThat:result isWithinEpsilon:0.0001 of:0.0025 withMessage:@"Testing IController"];  
+}
+
+- (void) testIControllerForValuesCrossingXAxis {
+  // We only want integral gain
+  [pidController setDerivativeGain:[NSNumber numberWithFloat:0.0]];
+  [pidController setIntegralGain:[NSNumber numberWithFloat:1.0]];
+  [pidController setProportionalGain:[NSNumber numberWithFloat:0.0]];
+  
+  [pidController setControlSignal:[NSNumber numberWithFloat:0.0]];
+  
+  // The integral controller needs at least two measurements in order
+  // to generate output.
+  [pidController setDt:10.0/1000];
+  
+  [pidController addMeasurement:[NSNumber numberWithFloat:1.0]];
+  [pidController addMeasurement:[NSNumber numberWithFloat:-1.0]];
+  
+  // This is a value that crosses the x-axis, so we expect the output
+  // to be zero.
+  STAssertTrue(_hasReceivedValue, @"Should have received an output from the PIDController");
+  double result = [_pidResult doubleValue];
+  [self assertThat:result isWithinEpsilon:0.0001 of:0.0 withMessage:@"Testing IController for value crossing the x-axis"];  
+}
+
+- (void) testIControllerForNegativeValues {
+  // We only want integral gain
+  [pidController setDerivativeGain:[NSNumber numberWithFloat:0.0]];
+  [pidController setIntegralGain:[NSNumber numberWithFloat:1.0]];
+  [pidController setProportionalGain:[NSNumber numberWithFloat:0.0]];
+  
+  [pidController setControlSignal:[NSNumber numberWithFloat:0.0]];
+  
+  // The integral controller needs at least two measurements in order
+  // to generate output.
+  [pidController setDt:10.0/1000];
+  
+  [pidController addMeasurement:[NSNumber numberWithFloat:-1.0]];
+  [pidController addMeasurement:[NSNumber numberWithFloat:-0.5]];
+  
+  STAssertTrue(_hasReceivedValue, @"Should have received an output from the PIDController");
+  double result = [_pidResult doubleValue];
+  [self assertThat:result isWithinEpsilon:0.0001 of:0.0075 withMessage:@"Testing IController for value crossing the x-axis"];  
+}
+
+- (void) testIControllerForMultipleValues {
+  // We only want integral gain
+  [pidController setDerivativeGain:[NSNumber numberWithFloat:0.0]];
+  [pidController setIntegralGain:[NSNumber numberWithFloat:1.0]];
+  [pidController setProportionalGain:[NSNumber numberWithFloat:0.0]];
+  
+  [pidController setControlSignal:[NSNumber numberWithFloat:0.0]];
+  
+  // The integral controller needs at least two measurements in order
+  // to generate output.
+  [pidController setDt:10.0/1000];
+  
+  [pidController addMeasurement:[NSNumber numberWithFloat:1.0]];
+  [pidController addMeasurement:[NSNumber numberWithFloat:0.5]];
+  [pidController addMeasurement:[NSNumber numberWithFloat:2.0]];
+  
+  STAssertTrue(_hasReceivedValue, @"Should have received an output from the PIDController");
+  double result = [_pidResult doubleValue];
+  [self assertThat:result isWithinEpsilon:0.0001 of:-0.02 withMessage:@"Testing IController for multiple values"];  
 }
 
 @end

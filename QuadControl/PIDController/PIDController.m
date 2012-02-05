@@ -13,7 +13,7 @@
 // For setting gain of the different components of the
 // PID controller
 @synthesize proportionalGain = _proportionalGain;
-@synthesize integralGain = _intergralGain;
+@synthesize integralGain = _integralGain;
 @synthesize derivativeGain = _derivativeGain;
 
 // Setting the desired value
@@ -71,10 +71,30 @@
     for (int i = 0; i < numHistoryItems - 1; i++) {
       double startPoint = [[_history objectAtIndex:i] doubleValue];
       double endPoint = [[_history objectAtIndex:i+1] doubleValue];
-      // TODO(fjab): Do as simple math as possible
-      // result += areaUnderCurveBetweenStartAndEnd
+      if (abs(startPoint) + abs(endPoint) == abs(startPoint + endPoint)) {
+        // Are we above or below the x-axis?
+        double minValue, maxValue;
+        if (startPoint >= 0 && endPoint >= 0) {
+          // We are above the x-axis
+          // The values are on the same side of the plus/minus thing.
+          minValue = MIN(startPoint, endPoint);
+          maxValue = MAX(startPoint, endPoint);
+        } else {
+          // We are below the x-axis
+          minValue = MAX(startPoint, endPoint);
+          maxValue = MIN(startPoint, endPoint);
+        }        
+        double squareBlock = minValue * _dt;
+        double triangleBlock = 0.5 * (maxValue - minValue) * _dt;
+        result += squareBlock + triangleBlock;
+      } else {
+        // The values are on different sides of the x-axis, and 
+        // we ignore them...
+      }
     }
-    return result * [_integralGain doubleValue];  
+    double integralGain = [_integralGain doubleValue];
+    double finalResult = result * integralGain;
+    return finalResult;
   } else {
     // We don't have enough datapoints to calculate this value
     return 0.0;

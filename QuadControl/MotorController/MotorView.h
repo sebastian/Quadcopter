@@ -16,6 +16,14 @@
   IBOutlet UIView * motorRightFront;
   IBOutlet UIView * motorRightBack;
   
+  IBOutlet UILabel * motorLabelLeftFront;
+  IBOutlet UILabel * motorLabelLeftBack;
+  IBOutlet UILabel * motorLabelRightFront;
+  IBOutlet UILabel * motorLabelRightBack;
+  
+  IBOutlet UILabel * pidLabelFrontBack;
+  IBOutlet UILabel * pidLabelLeftRight;
+  
   UIColor * _black;
   
   id<MotorViewDelegate> _delegate;
@@ -31,6 +39,8 @@
                                leftBack:(NSInteger)leftBack 
                              rightFront:(NSInteger)rightFront
                               rightBack:(NSInteger)rightBack;
+- (void) setPidValueForLeftRight:(double) value;
+- (void) setPidValueForFrontBack:(double) value;
 
 - (IBAction)changePSliderValue:(UISlider*)sender;
 - (IBAction)changeISliderValue:(UISlider*)sender;
