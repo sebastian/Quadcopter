@@ -12,6 +12,8 @@
 
 @implementation AccelerometerController
 
+@synthesize delegate = _delegate;
+
 #pragma mark -
 #pragma mark === Setup and teardown ===
 #pragma mark -
@@ -35,7 +37,7 @@
   accelerationY = acceleration.y;
   accelerationZ = acceleration.z;
   
-  NSLog(@"X: %f, Y: %f, Z: %f", accelerationX, accelerationY, accelerationZ);
+  [self.delegate accelerometerController:self x:accelerationX y:accelerationY z:accelerationZ];
 }
 
 

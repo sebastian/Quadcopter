@@ -12,21 +12,12 @@
 
 - (void)setUp
 {
-    [super setUp];
-    
-    // Set-up code here.
+  [super setUp];
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
-    
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in QuadControlTests");
+  [super tearDown];
 }
 
 @end

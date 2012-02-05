@@ -7,7 +7,7 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "PIDController.h"
 
-@interface QuadControlTests : SenTestCase
-
+@interface QuadControlTests : SenTestCase 
 @end

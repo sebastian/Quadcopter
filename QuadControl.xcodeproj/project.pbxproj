@@ -14,8 +14,6 @@
 		96262A1F14BCC74F003333E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96262A1E14BCC74F003333E7 /* main.m */; };
 		96262A2314BCC74F003333E7 /* QuadControlAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96262A2214BCC74F003333E7 /* QuadControlAppDelegate.m */; };
 		96262A2614BCC74F003333E7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96262A2414BCC74F003333E7 /* MainWindow.xib */; };
-		96262A2914BCC74F003333E7 /* QuadControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96262A2814BCC74F003333E7 /* QuadControlViewController.m */; };
-		96262A2C14BCC74F003333E7 /* QuadControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96262A2A14BCC74F003333E7 /* QuadControlViewController.xib */; };
 		96262A3414BCC750003333E7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96262A3314BCC750003333E7 /* SenTestingKit.framework */; };
 		96262A3514BCC750003333E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96262A1214BCC74F003333E7 /* UIKit.framework */; };
 		96262A3614BCC750003333E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96262A1414BCC74F003333E7 /* Foundation.framework */; };
@@ -23,6 +21,11 @@
 		96262A3F14BCC750003333E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96262A3D14BCC750003333E7 /* InfoPlist.strings */; };
 		96262A4114BCC750003333E7 /* QuadControlTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 96262A4014BCC750003333E7 /* QuadControlTests.h */; };
 		96262A4314BCC750003333E7 /* QuadControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96262A4214BCC750003333E7 /* QuadControlTests.m */; };
+		962BEF2614DD9211001E42D2 /* PIDControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 962BEF2514DD9211001E42D2 /* PIDControllerTest.m */; };
+		962BEF2A14DDCC69001E42D2 /* MotorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962BEF2914DDCC69001E42D2 /* MotorController.m */; };
+		962BEF2B14DDCC69001E42D2 /* MotorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962BEF2914DDCC69001E42D2 /* MotorController.m */; };
+		9678A6C014DE92D3007F7B93 /* MotorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9678A6BF14DE92D3007F7B93 /* MotorView.m */; };
+		9678A6C614DE93A4007F7B93 /* MotorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9678A6C514DE93A4007F7B93 /* MotorView.xib */; };
 		96DAC92414D44DF300F092D9 /* PIDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DAC92314D44DF300F092D9 /* PIDController.m */; };
 		96DAC92814D44F7D00F092D9 /* AccelerometerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DAC92714D44F7D00F092D9 /* AccelerometerController.m */; };
 /* End PBXBuildFile section */
@@ -49,15 +52,19 @@
 		96262A2114BCC74F003333E7 /* QuadControlAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadControlAppDelegate.h; sourceTree = "<group>"; };
 		96262A2214BCC74F003333E7 /* QuadControlAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadControlAppDelegate.m; sourceTree = "<group>"; };
 		96262A2514BCC74F003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		96262A2714BCC74F003333E7 /* QuadControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadControlViewController.h; sourceTree = "<group>"; };
-		96262A2814BCC74F003333E7 /* QuadControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadControlViewController.m; sourceTree = "<group>"; };
-		96262A2B14BCC74F003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/QuadControlViewController.xib; sourceTree = "<group>"; };
 		96262A3214BCC750003333E7 /* QuadControlTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuadControlTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96262A3314BCC750003333E7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		96262A3C14BCC750003333E7 /* QuadControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuadControlTests-Info.plist"; sourceTree = "<group>"; };
 		96262A3E14BCC750003333E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96262A4014BCC750003333E7 /* QuadControlTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadControlTests.h; sourceTree = "<group>"; };
 		96262A4214BCC750003333E7 /* QuadControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuadControlTests.m; sourceTree = "<group>"; };
+		962BEF2414DD9211001E42D2 /* PIDControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDControllerTest.h; sourceTree = "<group>"; };
+		962BEF2514DD9211001E42D2 /* PIDControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDControllerTest.m; sourceTree = "<group>"; };
+		962BEF2814DDCC69001E42D2 /* MotorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotorController.h; path = MotorController/MotorController.h; sourceTree = "<group>"; };
+		962BEF2914DDCC69001E42D2 /* MotorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MotorController.m; path = MotorController/MotorController.m; sourceTree = "<group>"; };
+		9678A6BE14DE92D3007F7B93 /* MotorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotorView.h; path = MotorController/MotorView.h; sourceTree = "<group>"; };
+		9678A6BF14DE92D3007F7B93 /* MotorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MotorView.m; path = MotorController/MotorView.m; sourceTree = "<group>"; };
+		9678A6C514DE93A4007F7B93 /* MotorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorView.xib; sourceTree = "<group>"; };
 		96DAC92214D44DF300F092D9 /* PIDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PIDController.h; path = PIDController/PIDController.h; sourceTree = "<group>"; };
 		96DAC92314D44DF300F092D9 /* PIDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PIDController.m; path = PIDController/PIDController.m; sourceTree = "<group>"; };
 		96DAC92614D44F7D00F092D9 /* AccelerometerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerometerController.h; path = Accelerometer/AccelerometerController.h; sourceTree = "<group>"; };
@@ -122,14 +129,12 @@
 		96262A1814BCC74F003333E7 /* QuadControl */ = {
 			isa = PBXGroup;
 			children = (
+				962BEF2714DDCC33001E42D2 /* MotorController */,
 				96DAC92514D44F1000F092D9 /* Accelerometer */,
 				96DAC92014D44DBD00F092D9 /* PID */,
 				96262A2114BCC74F003333E7 /* QuadControlAppDelegate.h */,
 				96262A2214BCC74F003333E7 /* QuadControlAppDelegate.m */,
 				96262A2414BCC74F003333E7 /* MainWindow.xib */,
-				96262A2714BCC74F003333E7 /* QuadControlViewController.h */,
-				96262A2814BCC74F003333E7 /* QuadControlViewController.m */,
-				96262A2A14BCC74F003333E7 /* QuadControlViewController.xib */,
 				96262A1914BCC74F003333E7 /* Supporting Files */,
 			);
 			path = QuadControl;
@@ -149,6 +154,7 @@
 		96262A3A14BCC750003333E7 /* QuadControlTests */ = {
 			isa = PBXGroup;
 			children = (
+				962BEF2314DD9196001E42D2 /* PID tests */,
 				96262A4014BCC750003333E7 /* QuadControlTests.h */,
 				96262A4214BCC750003333E7 /* QuadControlTests.m */,
 				96262A3B14BCC750003333E7 /* Supporting Files */,
@@ -163,6 +169,28 @@
 				96262A3D14BCC750003333E7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		962BEF2314DD9196001E42D2 /* PID tests */ = {
+			isa = PBXGroup;
+			children = (
+				962BEF2414DD9211001E42D2 /* PIDControllerTest.h */,
+				962BEF2514DD9211001E42D2 /* PIDControllerTest.m */,
+			);
+			name = "PID tests";
+			path = ../QuadControl;
+			sourceTree = "<group>";
+		};
+		962BEF2714DDCC33001E42D2 /* MotorController */ = {
+			isa = PBXGroup;
+			children = (
+				962BEF2814DDCC69001E42D2 /* MotorController.h */,
+				962BEF2914DDCC69001E42D2 /* MotorController.m */,
+				9678A6BE14DE92D3007F7B93 /* MotorView.h */,
+				9678A6BF14DE92D3007F7B93 /* MotorView.m */,
+				9678A6C514DE93A4007F7B93 /* MotorView.xib */,
+			);
+			name = MotorController;
 			sourceTree = "<group>";
 		};
 		96DAC92014D44DBD00F092D9 /* PID */ = {
@@ -255,7 +283,7 @@
 			files = (
 				96262A1D14BCC74F003333E7 /* InfoPlist.strings in Resources */,
 				96262A2614BCC74F003333E7 /* MainWindow.xib in Resources */,
-				96262A2C14BCC74F003333E7 /* QuadControlViewController.xib in Resources */,
+				9678A6C614DE93A4007F7B93 /* MotorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +321,10 @@
 			files = (
 				96262A1F14BCC74F003333E7 /* main.m in Sources */,
 				96262A2314BCC74F003333E7 /* QuadControlAppDelegate.m in Sources */,
-				96262A2914BCC74F003333E7 /* QuadControlViewController.m in Sources */,
 				96DAC92414D44DF300F092D9 /* PIDController.m in Sources */,
 				96DAC92814D44F7D00F092D9 /* AccelerometerController.m in Sources */,
+				962BEF2A14DDCC69001E42D2 /* MotorController.m in Sources */,
+				9678A6C014DE92D3007F7B93 /* MotorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +333,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				96262A4314BCC750003333E7 /* QuadControlTests.m in Sources */,
+				962BEF2614DD9211001E42D2 /* PIDControllerTest.m in Sources */,
+				962BEF2B14DDCC69001E42D2 /* MotorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,14 +363,6 @@
 				96262A2514BCC74F003333E7 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		96262A2A14BCC74F003333E7 /* QuadControlViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96262A2B14BCC74F003333E7 /* en */,
-			);
-			name = QuadControlViewController.xib;
 			sourceTree = "<group>";
 		};
 		96262A3D14BCC750003333E7 /* InfoPlist.strings */ = {
