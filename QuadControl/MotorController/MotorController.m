@@ -45,6 +45,9 @@
 
     [_leftRightPidController setControlSignal:[NSNumber numberWithDouble:desiredLeftRight]];
     [_frontBackPidController setControlSignal:[NSNumber numberWithDouble:desiredFrontBack]];
+
+    [_leftRightPidController setNumberOfTermsInHistory:10];
+    [_frontBackPidController setNumberOfTermsInHistory:10];
     
     motorLeftFront = 0;
     motorLeftBack = 0;
